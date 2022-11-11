@@ -1,0 +1,125 @@
+.modal-content {
+  height: auto;
+  max-height: auto;
+  background: rgba(68, 68, 68, 0.45) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.modal-Cont {
+  width: 100%;
+  display: flex;
+}
+.cont-Stats {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.cont-Info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 6rem;
+}
+.cont-Stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+  gap: 0.5rem;
+}
+.img-Modal {
+  position: absolute;
+  bottom: 200px;
+}
+.container-btn-close {
+  display: flex;
+}
+.close-Btn {
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  height: 4rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  justify-content: center;
+
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.progress {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: none;
+}
+
+.progress::-webkit-progress-bar {
+  border: none;
+  backdrop-filter: blur(10px);
+  background: rgb(85, 85, 85) !important;
+}
+
+.progress::-webkit-progress-value {
+  background-color: #00d0ff !important;
+}
+
+.progress::-moz-progress-bar {
+  border: none;
+  backdrop-filter: blur(10px);
+  background: rgb(85, 85, 85) !important;
+}
+
+.progress::-moz-progress-value {
+  background-color: #00d0ff !important;
+}
+
+.cont-Data {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.cont-Data span {
+  font-weight: bold;
+}
+.weight-height {
+  display: flex;
+  justify-content: space-around;
+}
+.moves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .modal-Cont {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cont-Info {
+    width: 100%;
+  }
+  .cont-Stats {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .img-Modal {
+    top: -130px;
+  }
+  .modal-content {
+    top: 7rem;
+  }
+}

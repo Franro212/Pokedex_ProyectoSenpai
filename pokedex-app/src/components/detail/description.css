@@ -1,0 +1,162 @@
+.container-descr {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.link-coursel {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.link-c-1 {
+  position: relative;
+}
+
+.cont-second {
+  width: 80vw;
+  height: inherit;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-img {
+  display: flex;
+  width: 50%;
+  margin-bottom: 6rem;
+  align-items: center;
+}
+.cont-BackBtn {
+  position: absolute;
+  left: 120px;
+  top: 50px;
+}
+
+.back-Btn {
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem 1rem;
+  height: 5rem;
+  border-radius: 1rem;
+  margin-left: 2rem;
+
+  background-color: transparent;
+  backdrop-filter: blur(px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.back-Btn:hover {
+  box-shadow: 0 4px 16px rgba(55, 55, 55, 0.5);
+  transition: all 0.2s ease;
+  pointer-events: all;
+}
+
+.cont-basic {
+  width: 50%;
+  margin: 2rem;
+}
+.id-desc {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.cont-type {
+  display: flex;
+  gap: 2rem;
+}
+
+.type1,
+.type2 {
+  text-align: center;
+  width: 8rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.title-name {
+  font-size: 4rem;
+}
+
+.txt-desc {
+  width: 60%;
+}
+
+.img-big {
+  filter: drop-shadow(0px 20px 5px rgba(75, 75, 75, 0.3));
+}
+.btn-states {
+  width: 70%;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: 500;
+  border: none;
+  font-size: 18px;
+}
+
+.btn-states:hover {
+  box-shadow: 0 4px 16px rgba(55, 55, 55, 0.5);
+  transition: all 0.2s ease;
+  pointer-events: all;
+}
+.link-c-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: 4rem;
+}
+.link-c-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  right: 8rem;
+}
+
+@media (max-width: 400px) {
+  .cont-second {
+    flex-direction: column;
+  }
+  .cont-basic {
+    width: 100%;
+  }
+  .cont-img {
+    width: 100%;
+    flex-direction: column;
+  }
+  .img-big {
+    width: 30rem;
+    height: auto;
+    top: 6.5rem;
+    position: relative;
+  }
+  .txt-desc {
+    width: 100%;
+  }
+  .container-descr {
+    width: 100%;
+    height: 100vh;
+  }
+  .title-name {
+    font-size: 4rem;
+  }
+  .btn-states {
+    width: 100%;
+    background-color: #fff;
+  }
+  .cont-BackBtn {
+    left: 10px;
+    top: 20px;
+  }
+  .link-coursel {
+    font-size: 3rem;
+  }
+  .link-c-1 {
+    left: 0rem;
+  }
+  .link-c-2 {
+    right: 0rem;
+  }
+}
