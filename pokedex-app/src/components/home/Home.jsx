@@ -16,7 +16,7 @@ function Home() {
         <article className="header-home">
 
           <section className="cont-logo-home">
-            <img className="img-logo-home" src="/public/assets/Pokebola.png" />
+            <img className="img-logo-home" src="/assets/pokebola.png" />
             <span className="txt-logo-home">Pokédex</span>
           </section>
 
