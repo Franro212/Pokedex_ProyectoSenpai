@@ -14,13 +14,13 @@ function Header({ showData, dataDefault, listPokemones, orderAlfa, orderId }) {
   const [showButton, setShowButton] = useState(true);
 
   const navigate = useNavigate();
-
+  
   const onChangeInput = (e) => {
     let textInput = e.target.value.toLowerCase();
     if (textInput == "") {
       return dataDefault();
     }
-
+    
     const filter = listPokemones.filter((list) => {
       if (list.name.toLowerCase().includes(textInput)) {
         return true;
@@ -28,8 +28,10 @@ function Header({ showData, dataDefault, listPokemones, orderAlfa, orderId }) {
         return false;
       }
     });
-
+    
+    
     showData(filter);
+    
   };
 
   const onClickOrder = () => {
@@ -51,7 +53,7 @@ function Header({ showData, dataDefault, listPokemones, orderAlfa, orderId }) {
 
       <article className="cont-header">
         <section className="cont-logo">
-          <img className="img-logo" src="/assets/Pokebola.png" />
+          <img className="img-logo" src="/public/assets/Pokebola.png" />
           <span className="txt-logo">Pokédex</span>
         </section>
 

@@ -12,16 +12,16 @@ function App() {
   
   const [listPokemones, setListPokemones] = useState(pokemones);
   const [orderButton, setOrderButton] = useState(true);
-  const[datDefault, setDataDefault] = useState(false);
+  
 
   
   const showData = (data) => {
     setListPokemones(data);
   };
-  const dataDefault = () => {
-   setDataDefault(!datDefault)
+   const dataDefault = () => {
+   setListPokemones(pokemones)
     
-  };
+   };
 
   const orderAlfa = () => {
     const result = [...listPokemones]?.sort(function (a, b) {
@@ -56,7 +56,7 @@ function App() {
       <Stras />
       <Header
         showData={showData}
-        dataDefault={dataDefault}
+         dataDefault={dataDefault}
         listPokemones={listPokemones}
         orderAlfa={orderAlfa}
         orderId={orderId}
