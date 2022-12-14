@@ -51,7 +51,7 @@ function Header({ showData, dataDefault, listPokemones, orderAlfa, orderId }) {
 
       <article className="cont-header">
         <section className="cont-logo">
-          <img className="img-logo" src="/public/assets/Pokebola.png" />
+          <img className="img-logo" src="/assets/Pokebola.png" />
           <span className="txt-logo">Pokédex</span>
         </section>
 

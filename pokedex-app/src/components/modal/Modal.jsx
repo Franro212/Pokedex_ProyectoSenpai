@@ -1,4 +1,3 @@
-import React, { useEffect, useState} from "react";
 
 import { useParams,} from "react-router-dom";
 
@@ -8,24 +7,11 @@ import { FaRulerVertical } from "react-icons/fa";
 import { GiWeight } from "react-icons/gi";
 import { MdOutlineCatchingPokemon } from "react-icons/md";
 import "./modal.css";
+import pokemones from "../../API/data";
 
 
 export default function ModalStates(props) {
-const [pokemones, setPokemones] = useState ([]);
 
-  useEffect(()=>{
-    fetch("http://localhost:3000/pokemones",{
-      method:"GET",
-      headers: {"Content-Type": "application/json"},
-    })
-    .then((response)=> response.json())
-    .then((data) => {
-      setPokemones(data);
-    })
-    .catch((error)=>{
-      alert(error);
-    });
-  }, []);
 
 
   const { id } = useParams();

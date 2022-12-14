@@ -1,5 +1,5 @@
 //=========IMPORT HOOKS ==================
-import { useEffect, useState } from "react";
+import {useState } from "react";
 
 //=========IMPORT ROUTER ==================
 import { Link, useParams} from "react-router-dom";
@@ -8,26 +8,15 @@ import { Link, useParams} from "react-router-dom";
 import "./description.css";
 import ModalStates from "../modal/Modal";
 import { HiArrowLeft, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import pokemones from "../../API/data";
 
 
 
 function Description() {
   const [modalShow, setModalShow] = useState(false);
-  const [pokemones, setPokemones] = useState ([]);
+  
 
-  useEffect(()=>{
-    fetch("http://localhost:3000/pokemones",{
-      method:"GET",
-      headers: {"Content-Type": "application/json"},
-    })
-    .then((response)=> response.json())
-    .then((data) => {
-      setPokemones(data);
-    })
-    .catch((error)=>{
-      alert(error);
-    });
-  }, []);
+ 
 
 
   const { id } = useParams();

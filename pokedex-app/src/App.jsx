@@ -1,35 +1,23 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 // ============ IMPORTS COMPONENTS ===============
 import Stras from "./components/background/Stars";
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
+import pokemones from './API/data'
+
 
 
 function App() {
   
-  const [listPokemones, setListPokemones] = useState([]);
+  const [listPokemones, setListPokemones] = useState(pokemones);
   const [orderButton, setOrderButton] = useState(true);
   const[datDefault, setDataDefault] = useState(false);
 
-  useEffect(()=>{
-    fetch("http://localhost:3000/pokemones",{
-      method:"GET",
-      headers: {"Content-Type": "application/json"},
-    })
-    .then((response)=> response.json())
-    .then((data) => {
-      setListPokemones(data);
-    })
-    .catch((error)=>{
-      alert(error);
-    });
-  }, [datDefault]);
-
+  
   const showData = (data) => {
     setListPokemones(data);
   };
-
   const dataDefault = () => {
    setDataDefault(!datDefault)
     
